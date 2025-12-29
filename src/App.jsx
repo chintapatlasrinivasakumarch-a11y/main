@@ -9,6 +9,7 @@ import Payment from './pages/Payment';
 import Confirmation from './pages/Confirmation';
 import Contact from './pages/Contact';
 import Compare from './pages/Compare';
+import Dashboard from './pages/Dashboard';
 import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/compare" element={<Compare />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
         <Footer />

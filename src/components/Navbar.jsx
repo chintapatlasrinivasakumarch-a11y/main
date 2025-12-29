@@ -41,6 +41,7 @@ const Navbar = () => {
                             </span>
                         )}
                     </Link>
+                    <Link to="/dashboard" className="hover:text-primary-400 transition-colors">Dashboard</Link>
                     <Link to="/contact" className="hover:text-primary-400 transition-colors">Contact</Link>
                     <button className="btn-primary text-sm py-2 px-6">Get Started</button>
                 </div>
@@ -60,6 +61,7 @@ const Navbar = () => {
                         Compare
                         {compareCount > 0 && <span className="bg-primary-500 text-white text-[10px] px-2 py-1 rounded-full">{compareCount}</span>}
                     </Link>
+                    <Link to="/dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
                     <Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
                     <button className="btn-primary w-full mt-4">Get Started</button>
                 </div>

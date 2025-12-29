@@ -40,21 +40,57 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Why Choose Us Section */}
-            <section className="py-24 bg-white/5 border-y border-white/5 px-6">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div className="text-center p-8 rounded-3xl glass-dark">
-                        <h3 className="text-2xl font-bold mb-4">Expert Pilots</h3>
-                        <p className="text-slate-400 text-sm">Professional guidance from certified drone operators for every mission.</p>
-                    </div>
-                    <div className="text-center p-8 rounded-3xl glass-dark">
-                        <h3 className="text-2xl font-bold mb-4">4K Captures</h3>
-                        <p className="text-slate-400 text-sm">Every trip includes raw 4K footage and edited cinematic highlights for you to keep.</p>
-                    </div>
-                    <div className="text-center p-8 rounded-3xl glass-dark">
-                        <h3 className="text-2xl font-bold mb-4">Global Network</h3>
-                        <p className="text-slate-400 text-sm">From the Alps to the Outback, we have permitted flight zones across 40 countries.</p>
-                    </div>
+            {/* Testimonials */}
+            <section className="py-24 px-6 max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold mb-4">What Our Pilots Say</h2>
+                    <p className="text-slate-400">Trusted by over 5,000 professional and hobbyist operators worldwide.</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                        { name: "Alex Rivers", role: "Cinema Director", text: "The Mavic 3 Pro expedition in the Alps was life-changing. The technical support we received was top-notch." },
+                        { name: "Sarah Chen", role: "Agri-Tech Lead", text: "Chintu Drowns made it so easy to compare industrial models. We found the perfect XAG drone for our vineyard." },
+                        { name: "Marcus Thorne", role: "FPV Racer", text: "If you want speed, this is the place. The Icelandic Canyon run with the Bolt-X was pure adrenaline." }
+                    ].map((t, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="glass-dark p-8 rounded-[2rem] border border-white/5"
+                        >
+                            <div className="flex gap-1 mb-4">
+                                {[...Array(5)].map((_, star) => (
+                                    <span key={star} className="text-primary-500 text-lg">★</span>
+                                ))}
+                            </div>
+                            <p className="text-slate-300 italic mb-6">"{t.text}"</p>
+                            <div>
+                                <p className="font-bold">{t.name}</p>
+                                <p className="text-xs text-primary-400 uppercase tracking-widest">{t.role}</p>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Newsletter */}
+            <section className="py-24 px-6 border-t border-white/5 relative overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-primary-500/5 blur-[120px] rounded-full" />
+                <div className="max-w-4xl mx-auto text-center relative z-10">
+                    <h2 className="text-4xl md:text-5xl font-black mb-6">Stay in Flight</h2>
+                    <p className="text-slate-400 mb-10 text-lg">Join 10,000+ enthusiasts. Get the latest model drops and flight tips delivered to your cockpit.</p>
+                    <form className="flex flex-col md:flex-row gap-4 p-2 glass rounded-2xl md:rounded-full max-w-2xl mx-auto">
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            className="bg-transparent border-none focus:ring-0 px-6 py-4 flex-grow text-white"
+                        />
+                        <button className="btn-primary px-10 py-4 rounded-xl md:rounded-full font-bold">
+                            Subscribe
+                        </button>
+                    </form>
                 </div>
             </section>
         </div>

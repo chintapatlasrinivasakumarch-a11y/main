@@ -1,9 +1,21 @@
 import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, Download, Home, ShoppingBag } from 'lucide-react';
+import { useEffect } from 'react';
 
 const Confirmation = () => {
     const { state } = useLocation();
+
+    useEffect(() => {
+        if (state) {
+            const saved = JSON.parse(localStorage.getItem('myBookings') || '[]');
+            // Check if this orderId already exists to avoid duplicates on refresh
+            if (!saved.some(b => b.orderId === state.orderId)) {
+                const updated = [state, ...saved];
+                localStorage.setItem('myBookings', JSON.stringify(updated));
+            }
+        }
+    }, [state]);
 
     if (!state) return <div className="pt-32 text-center">No order found</div>;
 
