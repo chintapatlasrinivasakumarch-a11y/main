@@ -1,7 +1,17 @@
 import { Search, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        navigate(`/explore?search=${searchQuery}`);
+    };
+
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background with parallax effect */}
@@ -24,17 +34,22 @@ const Hero = () => {
                         Premium Aerial Adventures
                     </span>
                     <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter leading-tight">
-                        Discover unforgettable <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-600">prodects</span>
+                        Discover unforgettable <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-600">Drone Models</span>
                     </h1>
 
                     {/* Search UI */}
-                    <div className="mt-12 glass p-2 rounded-2xl md:rounded-full flex flex-col md:flex-row items-center gap-2 max-w-2xl mx-auto shadow-2xl">
+                    <form
+                        onSubmit={handleSearch}
+                        className="mt-12 glass p-2 rounded-2xl md:rounded-full flex flex-col md:flex-row items-center gap-2 max-w-2xl mx-auto shadow-2xl"
+                    >
                         <div className="flex-1 flex items-center gap-3 px-4 w-full border-b md:border-b-0 md:border-r border-white/10 py-3 md:py-0">
                             <Search className="text-slate-400 w-5 h-5" />
                             <input
                                 type="text"
                                 placeholder="Search type of drowns..."
                                 className="bg-transparent border-none focus:ring-0 text-white w-full placeholder:text-slate-500"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
                         <div className="flex-1 flex items-center gap-3 px-4 w-full py-3 md:py-0">
@@ -45,10 +60,10 @@ const Hero = () => {
                                 className="bg-transparent border-none focus:ring-0 text-white w-full placeholder:text-slate-500"
                             />
                         </div>
-                        <button className="btn-primary w-full md:w-auto">
+                        <button type="submit" className="btn-primary w-full md:w-auto">
                             Search
                         </button>
-                    </div>
+                    </form>
                 </motion.div>
             </div>
 

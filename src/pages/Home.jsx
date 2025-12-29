@@ -2,8 +2,10 @@ import Hero from '../components/Hero';
 import DrownCard from '../components/DrownCard';
 import { drownsData } from '../data/drownsData';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
     const featuredDrowns = drownsData.slice(0, 9);
 
     return (
@@ -17,9 +19,9 @@ const Home = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl font-bold mb-4">Featured Trips</h2>
+                        <h2 className="text-4xl font-bold mb-4">Featured Models</h2>
                         <p className="text-slate-400 max-w-lg">
-                            Explore our hand-picked selection of the most exhilarating drone expeditions around the globe.
+                            Explore our hand-picked selection of the most exhilarating drone platforms for every mission type.
                         </p>
                     </motion.div>
 
@@ -27,9 +29,10 @@ const Home = () => {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
+                        onClick={() => navigate('/explore')}
                         className="text-primary-400 font-bold flex items-center gap-2 border-b-2 border-primary-400/20 pb-1 hover:border-primary-400 transition-all"
                     >
-                        View All Drowns
+                        Explore Catalog
                     </motion.button>
                 </div>
 
