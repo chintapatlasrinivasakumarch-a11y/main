@@ -7,11 +7,11 @@ const Hero = () => {
             {/* Background with parallax effect */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1473968512647-3e445244155a?auto=format&fit=crop&q=80&w=2000"
+                    src="/hero.png"
                     alt="Hero background"
-                    className="w-full h-full object-cover scale-110 opacity-60"
+                    className="w-full h-full object-cover scale-105 opacity-50"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
             </div>
 
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
