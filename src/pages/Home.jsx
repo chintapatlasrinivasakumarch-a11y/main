@@ -4,7 +4,7 @@ import { drownsData } from '../data/drownsData';
 import { motion } from 'framer-motion';
 
 const Home = () => {
-    const featuredDrowns = drownsData.slice(0, 6);
+    const featuredDrowns = drownsData.slice(0, 9);
 
     return (
         <div>

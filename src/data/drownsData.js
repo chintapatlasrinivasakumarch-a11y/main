@@ -17,6 +17,22 @@ export const drownsData = [
         ]
     },
     {
+        id: 9,
+        name: "DJI Air 3",
+        type: "Air",
+        category: "DJI Collection",
+        destination: " Amalfi Coast Tour",
+        price: 1099,
+        duration: "2 Days",
+        image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=1000",
+        description: "Featuring the first dual-primary camera system of the Air series, with a wide-angle and 3x medium tele camera.",
+        highlights: ["Dual-Primary Cameras", "46 Min Flight Time", "Waypoint Flight", "O4 Video Transmission"],
+        itinerary: [
+            "Day 1: Coastline Photography",
+            "Day 2: Medium Tele Mastery"
+        ]
+    },
+    {
         id: 2,
         name: "DJI Mini 4 Pro",
         type: "Mini",
@@ -37,7 +53,7 @@ export const drownsData = [
         id: 3,
         name: "DJI Avata 2",
         type: "Avata",
-        category: "DJI Collection",
+        category: "Racing / FPV",
         destination: "Icelandic Canyons",
         price: 999,
         duration: "2 Days",
@@ -47,6 +63,22 @@ export const drownsData = [
         itinerary: [
             "Day 1: Goggles & Motion Control Info",
             "Day 2: High-Speed Canyon Racing"
+        ]
+    },
+    {
+        id: 10,
+        name: "Bolt-X Pro",
+        type: "Racing",
+        category: "Racing / FPV",
+        destination: "Cyberpunk Night Track",
+        price: 1200,
+        duration: "1 Day",
+        image: "https://images.unsplash.com/photo-1527977966376-1c8418f9f108?auto=format&fit=crop&q=80&w=1000",
+        description: "Custom-built carbon fiber racing drone. Capable of extreme speeds and nimble maneuvers for professional drone racing.",
+        highlights: ["160km/h Top Speed", "6S Lipo Power", "600mW VTX", "Low Latency Digital Link"],
+        itinerary: [
+            "Morning: Track Layout & Safety",
+            "Afternoon: Time Trials & Heats"
         ]
     },
     {
@@ -64,6 +96,24 @@ export const drownsData = [
             "Night 1: Tracking Practice",
             "Night 2: Low-Light Mapping",
             "Night 3: Data Analysis Workshop"
+        ]
+    },
+    {
+        id: 11,
+        name: "AgEagle eBee X",
+        type: "AgEagle",
+        category: "Mapping / Surveying",
+        destination: "Vast Farmlands",
+        price: 12000,
+        duration: "5 Days",
+        image: "/agri.png",
+        description: "Fixed-wing drone designed to map more area, more efficiently. High-precision mapping with RTK/PPK capability.",
+        highlights: ["Fixed-Wing Efficiency", "90 Min Flight Time", "Multi-Sensor Support", "High-Precision Mapping"],
+        itinerary: [
+            "Day 1: Fixed-Wing Basics",
+            "Day 2: Large Area Mapping",
+            "Day 3: Post-Processing Data",
+            "Day 4-5: Advanced Orthomosaics"
         ]
     },
     {

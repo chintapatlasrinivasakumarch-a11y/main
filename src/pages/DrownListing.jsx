@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const DrownListing = () => {
     const [activeCategory, setActiveCategory] = useState("All");
-    const categories = ["All", "DJI Collection", "Enterprise", "Agricultural", "VTOL / Tactical"];
+    const categories = ["All", "DJI Collection", "Enterprise", "Agricultural", "Racing / FPV", "Mapping / Surveying", "VTOL / Tactical"];
 
     const filteredDrowns = activeCategory === "All"
         ? drownsData
