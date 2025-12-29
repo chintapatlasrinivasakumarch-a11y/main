@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="col-span-1 md:col-span-2">
                     <Link to="/" className="flex items-center gap-2 mb-6">
                         <Plane className="w-8 h-8 text-primary-500" />
-                        <span className="text-xl font-bold tracking-tighter">DROWNS</span>
+                        <span className="text-xl font-bold tracking-tighter">Chintu Drowns</span>
                     </Link>
                     <p className="text-slate-400 max-w-sm">
                         Experience the world from a new perspective. Our premium drone expeditions offer unforgettable views and high-tech adventures.
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
             <div className="max-w-7xl mx-auto pt-8 border-t border-white/5 text-center text-slate-500 text-sm">
-                <p>&copy; {new Date().getFullYear()} DROWNS Inc. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Chintu Drowns Inc. All rights reserved.</p>
             </div>
         </footer>
     );

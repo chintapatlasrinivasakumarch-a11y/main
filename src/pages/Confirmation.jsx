@@ -75,7 +75,7 @@ const Confirmation = () => {
 
             <div className="mt-12 text-center text-slate-500 text-sm flex items-center justify-center gap-2">
                 <ShoppingBag size={14} />
-                Thank you for choosing DROWNS for your sky-high journey!
+                Thank you for choosing Chintu Drowns for your sky-high journey!
             </div>
         </div>
     );

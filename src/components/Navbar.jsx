@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 group">
                     <Plane className="w-8 h-8 text-primary-500 transform group-hover:rotate-45 transition-transform" />
-                    <span className="text-xl font-bold tracking-tighter">DROWNS</span>
+                    <span className="text-xl font-bold tracking-tighter">Chintu Drowns</span>
                 </Link>
 
                 {/* Desktop Menu */}
