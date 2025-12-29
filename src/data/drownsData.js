@@ -99,6 +99,23 @@ export const drownsData = [
         ]
     },
     {
+        id: 13,
+        name: "DJI Matrice 350 RTK",
+        type: "Matrice",
+        category: "Enterprise",
+        destination: "Infrastructure Inspection",
+        price: 11500,
+        duration: "3 Days",
+        image: "/enterprise.png",
+        description: "An upgraded flagship, the Matrice 350 RTK sets a new benchmark for the industry. This is the ultimate tool for commercial drone operations.",
+        highlights: ["55 Min Max Flight Time", "IP55 Rating", "Night-Vision FPV", "CSM Radar Support"],
+        itinerary: [
+            "Day 1: System Setup & Payload Config",
+            "Day 2: Complex Structure Inspection",
+            "Day 3: Data Processing & Reporting"
+        ]
+    },
+    {
         id: 11,
         name: "AgEagle eBee X",
         type: "AgEagle",
@@ -150,6 +167,23 @@ export const drownsData = [
             "Day 2: Field Mapping",
             "Day 3-4: Autonomous Spraying Ops",
             "Day 5: Performance Optimization"
+        ]
+    },
+    {
+        id: 12,
+        name: "DJI Agras T40",
+        type: "Agras",
+        category: "Agricultural",
+        destination: "Mega-Farm Automation",
+        price: 18000,
+        duration: "7 Days",
+        image: "/agri.png",
+        description: "The agricultural flagship. Massive payload for spreading and spraying, equipped with Active Phased Array Radar and Binocular Vision.",
+        highlights: ["40kg Spraying Payload", "50kg Spreading Payload", "Active Phased Array Radar", "Coaxial Twin Rotor"],
+        itinerary: [
+            "Day 1: Heavy Lift Operations",
+            "Day 2-3: Autonomous Orchard Spraying",
+            "Day 4-7: Precision Agriculture Mastery"
         ]
     },
     {
