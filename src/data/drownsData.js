@@ -1,97 +1,138 @@
 export const drownsData = [
     {
         id: 1,
-        name: "SkyMaster Pro X1",
-        type: "Professional Cinema",
+        name: "DJI Mavic 3 Pro",
+        type: "Mavic",
+        category: "DJI Collection",
         destination: "Swiss Alps Expedition",
-        price: 1200,
+        price: 2199,
         duration: "3 Days",
-        image: "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?auto=format&fit=crop&q=80&w=1000",
-        description: "The ultimate cinema drone for breathtaking aerial shots. Equipped with a 6K Hasselblad camera and advanced stabilization.",
-        highlights: ["6K Resolution", "40 min Flight Time", "Omnidirectional Obstacle Sensing", "OccuSync 3.0"],
+        image: "/mavic.png",
+        description: "The flagship consumer drone with a triple-camera system. Perfect for high-end cinematography and professional aerial photography.",
+        highlights: ["Hasselblad Main Camera", "Dual Tele Cameras", "43 Min Flight Time", "Omnidirectional Sensing"],
         itinerary: [
-            "Day 1: Arrival & Equipment Setup",
-            "Day 2: Sunrise Shoots at Matterhorn",
-            "Day 3: Valley Fly-throughs & Editing Workshop"
+            "Day 1: Alpine Flight Training",
+            "Day 2: Peak Cinematography",
+            "Day 3: 5.1K Video Editing"
         ]
     },
     {
         id: 2,
-        name: "NanoWing Mini 3",
-        type: "Consumer / Travel",
+        name: "DJI Mini 4 Pro",
+        type: "Mini",
+        category: "DJI Collection",
         destination: "Santorini Coastline",
-        price: 450,
+        price: 759,
         duration: "1 Day",
-        image: "https://images.unsplash.com/photo-1521749831539-40cd5790c0cd?auto=format&fit=crop&q=80&w=1000",
-        description: "Compact, lightweight, and perfect for travelers. Capture your vacation from a new perspective without the bulk.",
-        highlights: ["Under 249g", "4K HDR Video", "True Vertical Shooting", "Extended Battery Life"],
+        image: "/mini.png",
+        description: "Regulation-friendly drone under 249g. Powerful performance in a compact body, ideal for travel and vertical shooting.",
+        highlights: ["Under 249g", "4K/60fps HDR", "True Vertical Shooting", "20km Video Transmission"],
         itinerary: [
-            "Morning: Coastal Cliff Flights",
-            "Afternoon: Sunset Villa Captures",
-            "Evening: Data Transfer & Quick Edit"
+            "Morning: Coastal Exploration",
+            "Afternoon: Sunset Photography",
+            "Evening: Social Media Batch Edit"
         ]
     },
     {
         id: 3,
-        name: "Falcon FPV Racer",
-        type: "High Speed FPV",
+        name: "DJI Avata 2",
+        type: "Avata",
+        category: "DJI Collection",
         destination: "Icelandic Canyons",
-        price: 800,
+        price: 999,
         duration: "2 Days",
-        image: "https://images.unsplash.com/photo-1527977966376-1c8418f9f108?auto=format&fit=crop&q=80&w=1000",
-        description: "Experience the thrill of high-speed flight. Perfect for fast-paced action shots and immersive canyon runs.",
-        highlights: ["140km/h Top Speed", "HD Digital Feed", "Acrobatic Capabilities", "Rugged Carbon Frame"],
+        image: "/avata.png",
+        description: "The ultimate immersive FPV experience. Easy to fly with the Motion Controller, providing thrilling first-person views.",
+        highlights: ["Immersive FPV", "Easy ACRO", "Super-Wide 4K/60fps", "Integrated Propeller Guard"],
         itinerary: [
-            "Day 1: FPV Basics & Safety",
+            "Day 1: Goggles & Motion Control Info",
             "Day 2: High-Speed Canyon Racing"
         ]
     },
     {
         id: 4,
-        name: "AquaGlide Sea Drone",
-        type: "Submersible / Hybrid",
-        destination: "Great Barrier Reef",
-        price: 1500,
-        duration: "4 Days",
-        image: "https://images.unsplash.com/photo-1473968512647-3e445244155a?auto=format&fit=crop&q=80&w=1000",
-        description: "Explore both air and sea. This hybrid drone can land on water and capture stunning underwater footage.",
-        highlights: ["Waterproof Design", "4K Underwater Cam", "Dual Propeller System", "GPS Return-to-Home"],
+        name: "Skydio X10",
+        type: "Skydio",
+        category: "Enterprise",
+        destination: "Cyber City Night",
+        price: 3500,
+        duration: "3 Days",
+        image: "/enterprise.png",
+        description: "The world's most advanced autonomous drone. Unmatched obstacle avoidance and specialized for night missions.",
+        highlights: ["Autonomous Tracking", "Night Vision Thermal", "IP55 Rating", "6G Connectivity"],
         itinerary: [
-            "Day 1: Reef Surveying",
-            "Day 2: Underwater Exploration",
-            "Day 3: Sunset Amphibious Flights",
-            "Day 4: Expedition Summary"
+            "Night 1: Tracking Practice",
+            "Night 2: Low-Light Mapping",
+            "Night 3: Data Analysis Workshop"
         ]
     },
     {
         id: 5,
-        name: "Titan Industrial X",
-        type: "Heavy Lift / Industrial",
-        destination: "Norwegian Wind Farms",
-        price: 2500,
-        duration: "5 Days",
-        image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=1000",
-        description: "Built for the toughest conditions. High payload capacity and thermal imaging for industrial inspections.",
-        highlights: ["Thermal Imaging", "15kg Payload", "IP55 Rating", "RTK Precision"],
+        name: "Autel EVO Max 4T",
+        type: "Autel Robotics",
+        category: "Enterprise",
+        destination: "Industrial Wind Farms",
+        price: 4200,
+        duration: "4 Days",
+        image: "/enterprise.png",
+        description: "A leader in industrial inspection. Features millimetre-wave radar for unmatched obstacle navigation in complex environments.",
+        highlights: ["A-Link 1.0", "Triple Camera System", "Laser Rangefinder", "Hot-Swappable Batteries"],
         itinerary: [
-            "Day 1-2: Turbine Inspection Basics",
-            "Day 3-5: High-Altitude Maintenance Support"
+            "Day 1: Radar Navigation",
+            "Day 2: Industrial Inspection",
+            "Day 3: Thermal Imaging Analysis",
+            "Day 4: Expedition Summary"
         ]
     },
     {
         id: 6,
-        name: "Aurora Night Scout",
-        type: "Night Vision / Search",
-        destination: "Lofoten Northern Lights",
-        price: 1800,
-        duration: "3 Days",
-        image: "https://images.unsplash.com/photo-1533230393025-acc975e2a392?auto=format&fit=crop&q=80&w=1000",
-        description: "Specialized for low-light conditions. Capture the Aurora Borealis in stunning detail with ultra-sensitive sensors.",
-        highlights: ["Ultra-Low Light Sensor", "Heated Batteries", "Long Exposure Mode", "Star Tracking"],
+        name: "XAG P100 Pro",
+        type: "XAG",
+        category: "Agricultural",
+        destination: "Global Green Plains",
+        price: 5500,
+        duration: "5 Days",
+        image: "/agri.png",
+        description: "Revolutionary agricultural drone for large-scale crop spraying and seeding. High payload and fully autonomous operation.",
+        highlights: ["50L Payload Capacity", "Bespoke Centrifugal Spray", "Fast Charging System", "RTK cm-level Precision"],
         itinerary: [
-            "Night 1: Base Camp Flights",
-            "Night 2: Deep Fjord Exploration",
-            "Night 3: Aurora Photography Masters"
+            "Day 1: Agri-Drone Setup",
+            "Day 2: Field Mapping",
+            "Day 3-4: Autonomous Spraying Ops",
+            "Day 5: Performance Optimization"
+        ]
+    },
+    {
+        id: 7,
+        name: "Parrot Anafi USA",
+        type: "Parrot",
+        category: "Government / Pro",
+        destination: "Canyon Rescue Simulation",
+        price: 2800,
+        duration: "2 Days",
+        image: "/enterprise.png",
+        description: "Designed for first responders and government use. Secure encryption and thermal imaging for mission-critical tasks.",
+        highlights: ["Blue UAS Cleared", "32x Zoom", "Thermal FLIR", "Encrypted Data Link"],
+        itinerary: [
+            "Day 1: Search & Rescue Ops",
+            "Day 2: Thermal Tracking Missions"
+        ]
+    },
+    {
+        id: 8,
+        name: "IdeaForge SWITCH",
+        type: "IdeaForge",
+        category: "VTOL / Tactical",
+        destination: "High Altitude Terrain",
+        price: 8500,
+        duration: "7 Days",
+        image: "/mavic.png",
+        description: "Vertical Take-Off and Landing (VTOL) tactical drone. Best-in-class endurance for surveillance and mapping in extreme weather.",
+        highlights: ["VTOL Capability", "120 Min Endurance", "15km Range", "Operational up to 6000m"],
+        itinerary: [
+            "Day 1: VTOL Operations",
+            "Day 2-4: Long-Range Recon",
+            "Day 5-7: Harsh Weather Survival"
         ]
     }
 ];
