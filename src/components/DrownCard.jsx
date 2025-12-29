@@ -1,9 +1,35 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Clock, MapPin } from 'lucide-react';
+import { Clock, MapPin, Zap, Check } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const DrownCard = ({ drown }) => {
     const navigate = useNavigate();
+    const [isInCompare, setIsInCompare] = useState(false);
+
+    useEffect(() => {
+        const saved = JSON.parse(localStorage.getItem('compareDrowns') || '[]');
+        setIsInCompare(saved.includes(drown.id));
+    }, [drown.id]);
+
+    const toggleCompare = (e) => {
+        e.stopPropagation();
+        const saved = JSON.parse(localStorage.getItem('compareDrowns') || '[]');
+        if (saved.includes(drown.id)) {
+            const updated = saved.filter(id => id !== drown.id);
+            localStorage.setItem('compareDrowns', JSON.stringify(updated));
+            setIsInCompare(false);
+        } else {
+            if (saved.length >= 3) {
+                alert("You can compare up to 3 models at a time.");
+                return;
+            }
+            const updated = [...saved, drown.id];
+            localStorage.setItem('compareDrowns', JSON.stringify(updated));
+            setIsInCompare(true);
+        }
+        window.dispatchEvent(new Event('compareUpdate'));
+    };
 
     return (
         <motion.div
@@ -21,6 +47,15 @@ const DrownCard = ({ drown }) => {
                 <div className="absolute top-6 left-6 glass px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-primary-400">
                     {drown.type}
                 </div>
+                <button
+                    onClick={toggleCompare}
+                    className={`absolute top-6 right-6 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 ${isInCompare
+                        ? 'bg-primary-500 text-white border-primary-400'
+                        : 'bg-black/40 text-white border-white/20 border hover:bg-white hover:text-black'
+                        }`}
+                >
+                    {isInCompare ? <Check size={18} /> : <Zap size={18} />}
+                </button>
             </div>
 
             <div className="p-8">

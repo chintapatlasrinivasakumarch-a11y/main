@@ -7,6 +7,8 @@ import DrownDetails from './pages/DrownDetails';
 import Booking from './pages/Booking';
 import Payment from './pages/Payment';
 import Confirmation from './pages/Confirmation';
+import Contact from './pages/Contact';
+import Compare from './pages/Compare';
 import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
             <Route path="/book/:id" element={<Booking />} />
             <Route path="/payment/:id" element={<Payment />} />
             <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/compare" element={<Compare />} />
           </Routes>
         </main>
         <Footer />
